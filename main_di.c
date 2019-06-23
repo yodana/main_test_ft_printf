@@ -146,6 +146,7 @@ int main()
     ft_printf("ft_printf:\t[-+25.30]\t[%-+25.30ld]\n", -ld);
 	printf("printf:\t\t[-+25.30]\t[%-+25.30ld]\n\n", -ld);
 
+    d = 246567;
     ft_printf("ft_printf:\t[]\t[%d]\n", d);
 	printf("printf:\t\t[]\t[%d]\n", d);
     ft_printf("ft_printf:\t[+]\t[%+d]\n", d);
