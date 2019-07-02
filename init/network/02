@@ -1,0 +1,5 @@
+ifconfig en0
+
+a) broadcast -> 10.12.255.255
+b)	IP premiere machine de ce sous reseau est : 10.12.0.1
+	IP de la derniere machine de ce sous reseau est : 10.12.255.254
