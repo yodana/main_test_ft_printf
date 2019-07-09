@@ -1,54 +1,56 @@
 #!/bin/bash
 
-echo "Hello "$USER", you want to encrypte or decrypte a file ?\n"
+red=$'\e[1;31m'
+grn=$'\e[1;32m'
+yel=$'\e[1;33m'
+blu=$'\e[1;34m'
+mag=$'\e[1;35m'
+cyn=$'\e[1;36m'
+end=$'\e[0m'
 
 
-echo "Enter 1 for encrypte or 2 to decrypte and type ENTER\n"
+clear
+printf "Hello "$USER", you want to encrypte or decrypte a file ?\n"
+
+printf "${blu}Enter [1] for encrypte or [2] to decrypte and type ENTER${end}\n"
 
 read ACTION
 
-echo "Enter the name of the output file :\n"
+clear 
 
-read OUTPUT
+printf "Enter the name of the output file :\n"
 
-echo "Which file do you want to work on ?\n"
+read  OUTPUT
+
+printf "Which file do you want to work on ?\n"
 
 read FILE
 
 if [ $ACTION = 1 ]; then
-	printf "Checking if $FILE exist ...\n"
+	printf "${yel}Checking if $FILE exist ...${end}\n"
 	if [ -f "$FILE" ]; then
-		printf "$FILE exist\n"
+		printf "${grn}$FILE exist${end}\n"
 	else
-		printf "$FILE doesn't exist, please enter a valid file name\n"
+		printf "${red}$FILE doesn't exist, please enter a valid file name${end}\n"
 		printf "Program stopped\n"
 		exit 0
 	fi
-	printf "I'll ask you an encryption password, DON'T FORGET IT or you will loose $FILE\n"
+	printf "${red}I'll ask you an encryption password, DON'T FORGET IT or you will loose $FILE ${end}\n"
 	openssl enc -AES-256-CBC -in $FILE -out $OUTPUT
-	printf "$FILE is encrypted. $OUTPUT created.\n"
-	echo "For better safety and privacy I can remove the non encrypted file $FILE, do you want me to remove it ? [Y/n]\n"
-	read RM
-	if [ "$RM" != "${RM#[Yy]}" ]; then
-		printf "Removing $FILE\n"
-		rm $FILE
-	else
-		printf "$FILE will not be deleted\n"
-	fi
-	exit 1
-
+	clear
+	printf "${grn}$FILE is encrypted. $OUTPUT created.${end}\n"
 
 elif [ $ACTION = 2 ]; then
-	printf "Checking if $FILE exist ...\n"
+	printf "${yel}Checking if $FILE exist ...${end}\n"
 	if [[ -f "$FILE" ]]; then
-		printf "$FILE exist\n"
+		printf "${grn}$FILE exist${end}\n"
 	else
-		print "$FILE doesn t exist, please enter a valid file name\n"		
+		printf "${red}$FILE doesn t exist, please enter a valid file name ${end}\n"
 		printf "Program stopped\n"
 		exit 0
 	fi
+	clear
 	openssl enc -AES-256-CBC -d -in $FILE -out $OUTPUT
-	printf "$FILE is decrypted. $OUTPUT created.\n"
-	exit 1
+	printf "${grn}$FILE is decrypted. $OUTPUT created.${end}\n"
 fi
 exit 0
