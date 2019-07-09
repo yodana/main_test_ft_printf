@@ -42,7 +42,7 @@ if [ $ACTION = 1 ]; then
 
 elif [ $ACTION = 2 ]; then
 	printf "${yel}Checking if $FILE exist ...${end}\n"
-	if [[ -f "$FILE" ]]; then
+	if [ -f "$FILE" ]; then
 		printf "${grn}$FILE exist${end}\n"
 	else
 		printf "${red}$FILE doesn t exist, please enter a valid file name ${end}\n"
