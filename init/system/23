@@ -1,0 +1,9 @@
+Pour se connecter en graphique en tant que ce nouvel utilisateur il faut : 
+
+- Avoir la page de login sur son ecran (apres un logout, un switch de session ou au demarrage)
+- Saisir dans son identifiant (nom du compte) et le mot de passe lie au compte
+
+Pour se connecter en ssh en tant que ce nouvel utilisateur il faut :
+
+- Sur un terminal executer : "identifiant"@"ip de la machine"
+- Saisir le mot de passe
