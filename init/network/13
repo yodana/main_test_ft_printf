@@ -1,3 +1,5 @@
+(nslookup IP_LOCAL)
+
 Server:		10.51.1.42
 Address:	10.51.1.42#53
 

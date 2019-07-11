@@ -1,1 +1,1 @@
-dig SOA slash16.org
+dig slash16.org +short

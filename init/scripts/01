@@ -1,4 +1,4 @@
 #!/bin/bash
 
 printf "Login:\tUID:\tPath:\t\n"
-awk -F ':' '{printf $1"\t"; printf $3"\t"; printf $3"\n"}' /etc/passwd
+awk -F ':' '{printf $1"\t"; printf $3"\t"; printf $6"\n"}' /etc/passwd

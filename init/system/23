@@ -5,5 +5,5 @@ Pour se connecter en graphique en tant que ce nouvel utilisateur il faut :
 
 Pour se connecter en ssh en tant que ce nouvel utilisateur il faut :
 
-- Sur un terminal executer : "identifiant"@"ip de la machine"
+- Sur un terminal executer : ssh"identifiant"@"ip de la machine" (si port 22 par defaut, ne pas ajouter :leport)
 - Saisir le mot de passe
