@@ -1,1 +1,1 @@
-ifconfig en0 | grep "inet"
+ifconfig en0 | grep "inet "

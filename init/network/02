@@ -1,2 +1,2 @@
 a) ifconfig en0 | grep broadcast | awk '{print $6}'
-b)	ping -c1 -s0 && arp -a | grep "(10.12" | cut -d " " -f2 | sed 's/[\(\)]//g'
+b)	ping -c1 -s0 [BROADCAST_IP] && arp -a | grep "(10.12" | cut -d " " -f2 | sed 's/[\(\)]//g'
