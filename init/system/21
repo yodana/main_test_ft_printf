@@ -1,1 +1,2 @@
-getent passwd {1000..60000} | cut -d : "-f1"
+#getent passwd {1000..60000} | cut -d : "-f1"
+cat /etc/passwd | grep "/home" | cut -d : "-f1"
